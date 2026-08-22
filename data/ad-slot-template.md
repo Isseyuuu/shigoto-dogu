@@ -7,11 +7,11 @@
 置かない（クリックしても何も起きないUIは読者の信用を損なうため）。
 
 ## 対象記事と現在の状態
-- `articles/running-beginner-gear.html`（ランニングシューズ／id="shoes" の直後）
-- `articles/hyrox-beginner-guide.html`（シューズ／id="shoes" の直後）
-- `articles/pickleball-beginner-gear.html`（コートシューズ／id="shoes" の直後）
+- `articles/running-beginner-gear.html`：2026年8月22日取得データから2商品を公開済み
+- `articles/hyrox-beginner-guide.html`：コメントブロックのまま非公開
+- `articles/pickleball-beginner-gear.html`：コメントブロックのまま非公開
 
-各記事に `<!-- RAKUTEN_AD_SLOT: ... --> ... <!-- /RAKUTEN_AD_SLOT -->` の
+未公開の記事には `<!-- RAKUTEN_AD_SLOT: ... --> ... <!-- /RAKUTEN_AD_SLOT -->` の
 コメントブロックとして仕込み済み。中身は下記スケルトンと同一。
 
 ## 公開作業の手順
