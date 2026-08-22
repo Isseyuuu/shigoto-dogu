@@ -8,11 +8,11 @@
 
 ## 対象記事と現在の状態
 - `articles/running-beginner-gear.html`：2026年8月22日取得データから2商品を公開済み
-- `articles/hyrox-beginner-guide.html`：コメントブロックのまま非公開
-- `articles/pickleball-beginner-gear.html`：コメントブロックのまま非公開
+- `articles/hyrox-beginner-guide.html`：2026年8月22日取得データから1商品を公開済み
+- `articles/pickleball-beginner-gear.html`：2026年8月22日取得データから2商品を公開済み
 
-未公開の記事には `<!-- RAKUTEN_AD_SLOT: ... --> ... <!-- /RAKUTEN_AD_SLOT -->` の
-コメントブロックとして仕込み済み。中身は下記スケルトンと同一。
+新規記事で未公開枠を用意する場合は、`<!-- RAKUTEN_AD_SLOT: ... --> ... <!-- /RAKUTEN_AD_SLOT -->`
+のコメントブロックとして仕込む。中身は下記スケルトンと同一。
 
 ## 公開作業の手順
 1. `scripts/rakuten_fetch.py` を実行し、`data/rakuten_items.json` を得る
