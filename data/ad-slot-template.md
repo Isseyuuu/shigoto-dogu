@@ -31,6 +31,8 @@
 |---|---|---|
 | `{{ITEM_n_NAME}}` | `itemName` | タグ除去済みの商品名 |
 | `{{ITEM_n_PRICE}}` | `itemPrice` | 数値（円）。カンマ区切り表示に整形して良い |
+| `{{ITEM_n_TAX_NOTE}}` | `taxNote` | 「税込」/「税抜」。**itemPriceは税込とは限らない**(taxFlag 0=税込/1=税抜)。決め打ち禁止 |
+| `{{ITEM_n_POSTAGE_NOTE}}` | `postageNote` | 「送料込」/「送料別」(postageFlag 0/1) |
 | `{{ITEM_n_REVIEW_COUNT}}` | `reviewCount` | 楽天市場の集計値 |
 | `{{ITEM_n_REVIEW_AVERAGE}}` | `reviewAverage` | 小数1桁で表示 |
 | `{{ITEM_n_AFFILIATE_URL}}` | `affiliateUrl` | 空なら掲載しない |
@@ -55,14 +57,14 @@
     <div class="ad-card">
       <strong>{{ITEM_1_NAME}}</strong>
       <img src="{{ITEM_1_IMAGE_URL}}" alt="{{ITEM_1_NAME}}" width="200" height="200" loading="lazy" decoding="async">
-      <small>楽天市場価格の目安：{{ITEM_1_PRICE}}円（税込・変動あり）</small>
+      <small>楽天市場価格の目安：{{ITEM_1_PRICE}}円（{{ITEM_1_TAX_NOTE}}・{{ITEM_1_POSTAGE_NOTE}}・変動あり）</small>
       <small>楽天市場のレビュー：★{{ITEM_1_REVIEW_AVERAGE}}（{{ITEM_1_REVIEW_COUNT}}件、楽天市場の集計値）</small>
       <a href="{{ITEM_1_AFFILIATE_URL}}" rel="sponsored nofollow">楽天市場で見る</a>
     </div>
     <div class="ad-card">
       <strong>{{ITEM_2_NAME}}</strong>
       <img src="{{ITEM_2_IMAGE_URL}}" alt="{{ITEM_2_NAME}}" width="200" height="200" loading="lazy" decoding="async">
-      <small>楽天市場価格の目安：{{ITEM_2_PRICE}}円（税込・変動あり）</small>
+      <small>楽天市場価格の目安：{{ITEM_2_PRICE}}円（{{ITEM_2_TAX_NOTE}}・{{ITEM_2_POSTAGE_NOTE}}・変動あり）</small>
       <small>楽天市場のレビュー：★{{ITEM_2_REVIEW_AVERAGE}}（{{ITEM_2_REVIEW_COUNT}}件、楽天市場の集計値）</small>
       <a href="{{ITEM_2_AFFILIATE_URL}}" rel="sponsored nofollow">楽天市場で見る</a>
     </div>

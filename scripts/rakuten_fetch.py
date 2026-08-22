@@ -84,6 +84,12 @@ def normalize(item):
         "itemName": strip_tags(item.get("itemName")),
         "shopName": item.get("shopName"),
         "itemPrice": item.get("itemPrice"),
+        # taxFlag 0=税込 / 1=税抜。itemPriceは税込とは限らないため、記事側の
+        # 税表記はこのフラグで切り替える(決め打ちすると誤表示=景表法リスク)。
+        "taxFlag": item.get("taxFlag"),
+        "taxNote": "税抜" if item.get("taxFlag") == 1 else "税込",
+        "postageFlag": item.get("postageFlag"),
+        "postageNote": "送料別" if item.get("postageFlag") == 1 else "送料込",
         "reviewCount": item.get("reviewCount", 0),
         "reviewAverage": float(item.get("reviewAverage") or 0),
         "itemUrl": item.get("itemUrl"),
