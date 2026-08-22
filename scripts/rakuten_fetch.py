@@ -57,6 +57,15 @@ def credentials():
     return app_id, access_key, os.environ.get("RAKUTEN_AFFILIATE_ID")
 
 
+def current_global_ip():
+    """IP制限で弾かれた際の切り分け用。取得できなくても致命的ではない。"""
+    try:
+        with urllib.request.urlopen("https://api.ipify.org", timeout=10) as res:
+            return res.read().decode("utf-8").strip()
+    except Exception as e:
+        return f"(取得できませんでした: {e})"
+
+
 def fetch_page(params, page):
     query = dict(params, page=page)
     url = ENDPOINT + "?" + urllib.parse.urlencode(query)
@@ -68,6 +77,16 @@ def fetch_page(params, page):
         body = e.read().decode("utf-8", errors="replace")[:300]
         if e.code == 429:
             sys.exit(f"429: リクエスト上限に達しました。時間を空けて再実行してください。\n{body}")
+        if e.code in (401, 403):
+            # アプリ登録時のIP許可リストに現在のIPが無いと拒否される。家庭回線の
+            # グローバルIPは固定契約でなければ変わるため、これが最も多い失敗要因。
+            # 「キーが失効した」等と誤診しないよう、現在のIPを併記する。
+            sys.exit(
+                f"HTTP {e.code}: 認証またはIP制限で拒否されました。\n{body}\n"
+                f"現在のグローバルIP: {current_global_ip()}\n"
+                "楽天ウェブサービスのアプリ設定「許可されたIPアドレス」に"
+                "このIPが登録されているか確認してください。"
+            )
         sys.exit(f"HTTP {e.code}: {body}")
     except urllib.error.URLError as e:
         sys.exit(f"接続に失敗しました: {e.reason}")
