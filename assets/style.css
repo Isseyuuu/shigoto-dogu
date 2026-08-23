@@ -118,6 +118,7 @@ html{scroll-padding-top:96px}body{font-size:16px;-webkit-font-smoothing:antialia
 /* 抽象figure。写実的な宝石やブランド表現は用いない */
 .bridal-figure{margin:38px 0;padding:0;border:1px solid var(--bd-line);border-radius:4px;background:var(--bd-surface);overflow:hidden}
 .bridal-figure svg{display:block;width:100%;height:auto;color:var(--bd-accent)}
+.bridal-page .bridal-figure img{display:block;width:100%;height:auto}
 .bridal-figure figcaption{padding:12px 18px;border-top:1px solid var(--bd-line);color:var(--bd-ink-soft);font-size:12.5px;letter-spacing:.04em}
 .bridal-cta{margin:44px 0;padding:32px;border:1px solid var(--bd-line);border-radius:4px;background:var(--bd-accent-soft)}
 .bridal-page .bridal-cta h2{margin-top:8px;border-bottom:0;padding-bottom:0}
