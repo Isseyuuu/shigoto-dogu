@@ -53,3 +53,105 @@ html{scroll-padding-top:96px}body{font-size:16px;-webkit-font-smoothing:antialia
 .work-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.work-grid .featured{grid-column:span 2;min-height:260px}.work-grid .hot{border-color:#e5aa8e;background:linear-gradient(145deg,#fff7f1 0%,#fff 75%)}.work-grid .hot:before{content:"NEW";position:absolute;right:18px;top:18px;padding:4px 9px;border-radius:999px;background:var(--orange);color:#fff;font-size:10px;font-weight:900;letter-spacing:.12em}.work-grid .guide-hub{background:linear-gradient(145deg,#e4f1e9 0%,#f7fbf8 100%)}
 .code-sample{margin:22px 0;padding:20px 22px;overflow-x:auto;border:1px solid #c9ddd0;border-radius:14px;background:#10291f;color:#ecfff4}.code-sample code{font-family:Consolas,"Courier New",monospace;font-size:14px;white-space:nowrap}.trial-checklist label{padding:6px 0}.trial-checklist input{width:18px;height:18px;vertical-align:-3px}
 @media(max-width:800px){.work-grid{grid-template-columns:1fr}.work-grid .featured{grid-column:auto}}
+
+/* ===== Bridal cluster =====================================================
+   スコープは .bridal-page 配下のみ。既存の :root 変数（--green 等）は
+   上書きしない（上書きすると仕事道具系ページに波及するため）。
+   意図：金色のベタ塗り・強いグラデーション・光沢・多重シャドウを使わず、
+   低彩度のニュートラル＋抑えたアクセント1色、広い余白、ヘアライン、
+   明朝体のタイポグラフィで品位を出す。
+   ========================================================================= */
+.bridal-page{
+  --bd-ink:#23201f;          /* 墨 */
+  --bd-ink-soft:#6a625d;     /* 副次テキスト */
+  --bd-paper:#faf8f5;        /* オフホワイト */
+  --bd-surface:#fff;
+  --bd-line:#e2dcd5;         /* ヘアライン */
+  --bd-accent:#6f4a55;       /* くすんだボルドー。彩度を抑える */
+  --bd-accent-soft:#f3ecee;
+  --bd-serif:"Hiragino Mincho ProN","Yu Mincho",YuMincho,"Noto Serif JP","Times New Roman",serif;
+  background:var(--bd-paper);
+  color:var(--bd-ink);
+}
+.bridal-page .article h1,.bridal-page .article h2,.bridal-page .article h3,
+.bridal-page .section h2,.bridal-page .bridal-figure figcaption{
+  font-family:var(--bd-serif);
+  font-weight:600;              /* 太らせず、大きさと字間で階層を作る */
+  letter-spacing:-.01em;
+}
+.bridal-page .article h1{font-size:clamp(30px,4.6vw,46px);line-height:1.45;letter-spacing:.005em}
+.bridal-page .article h2{margin:64px 0 18px;font-size:clamp(22px,3vw,29px);line-height:1.6;letter-spacing:.01em;padding-bottom:14px;border-bottom:1px solid var(--bd-line)}
+.bridal-page .article h3{font-size:19px;line-height:1.7}
+.bridal-page .article p,.bridal-page .article li{line-height:1.95;letter-spacing:.03em}
+.bridal-page .article .lead{font-family:var(--bd-serif);font-size:17px;line-height:2;letter-spacing:.03em;color:var(--bd-ink)}
+.bridal-page .eyebrow{color:var(--bd-accent);font-weight:600;letter-spacing:.18em}
+.bridal-page .meta,.bridal-page .source-note{color:var(--bd-ink-soft)}
+.bridal-page a{color:var(--bd-accent)}
+.bridal-page .article a:hover{color:#4e333c}
+/* 面はフラット。影は使わず1pxの罫線で分節する */
+.bridal-page .toc,.bridal-page .checklist,.bridal-page .note-box,
+.bridal-page .comparison-list article,.bridal-page .planning-flow li,
+.bridal-page .plan-example{
+  border:1px solid var(--bd-line);border-radius:4px;background:var(--bd-surface);box-shadow:none;
+}
+.bridal-page .toc{padding:26px 28px;background:var(--bd-surface)}
+.bridal-page .toc a{font-weight:400}
+.bridal-page .note-box{border-left:2px solid var(--bd-accent);border-radius:0 4px 4px 0;background:var(--bd-accent-soft);padding:22px 26px}
+.bridal-page .note-box p{color:var(--bd-ink-soft)}
+.bridal-page .checklist{padding:26px 28px;gap:12px}
+.bridal-page .button{background:var(--bd-accent);color:#fff;border-radius:2px;font-weight:600;box-shadow:none;letter-spacing:.06em}
+.bridal-page .button:hover{background:#573a44;transform:none}
+.bridal-page .tag{color:var(--bd-accent);font-weight:600;letter-spacing:.14em}
+.comparison-list{display:grid;gap:14px;margin:30px 0}
+.comparison-list article{padding:24px 28px}
+.comparison-list strong{font-family:var(--bd-serif);font-size:17px;letter-spacing:.02em}
+.comparison-list p{margin:8px 0 0;color:var(--bd-ink-soft);line-height:1.9}
+.planning-flow{display:grid;gap:14px;margin:30px 0;padding:0;list-style:none;counter-reset:plan}
+.planning-flow li{position:relative;padding:24px 28px 24px 72px;counter-increment:plan}
+.planning-flow li:before{content:counter(plan);position:absolute;left:26px;top:26px;display:grid;width:30px;height:30px;place-items:center;border:1px solid var(--bd-accent);border-radius:50%;color:var(--bd-accent);font-family:var(--bd-serif);font-size:14px}
+.planning-flow strong{font-family:var(--bd-serif);font-size:17px}
+.planning-flow p{margin:8px 0 0;color:var(--bd-ink-soft);line-height:1.9}
+.plan-example{margin:28px 0;overflow-x:auto}
+.plan-example table{width:100%;min-width:620px;border-collapse:collapse;background:transparent;min-width:620px}
+.plan-example th,.plan-example td{padding:14px 16px;border-bottom:1px solid var(--bd-line);text-align:left;font-size:15px}
+.plan-example thead th{background:var(--bd-accent-soft);color:var(--bd-accent);font-family:var(--bd-serif);font-weight:600}
+/* 抽象figure。写実的な宝石やブランド表現は用いない */
+.bridal-figure{margin:38px 0;padding:0;border:1px solid var(--bd-line);border-radius:4px;background:var(--bd-surface);overflow:hidden}
+.bridal-figure svg{display:block;width:100%;height:auto;color:var(--bd-accent)}
+.bridal-figure figcaption{padding:12px 18px;border-top:1px solid var(--bd-line);color:var(--bd-ink-soft);font-size:12.5px;letter-spacing:.04em}
+.bridal-cta{margin:44px 0;padding:32px;border:1px solid var(--bd-line);border-radius:4px;background:var(--bd-accent-soft)}
+.bridal-page .bridal-cta h2{margin-top:8px;border-bottom:0;padding-bottom:0}
+/* トップページのブライダル区画（.bridal-page を付けないため個別スコープ） */
+.bridal-section{padding-top:38px;padding-bottom:38px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.bridal-section h2{font-family:"Hiragino Mincho ProN","Yu Mincho",YuMincho,"Noto Serif JP",serif;font-weight:600;letter-spacing:.01em}
+.bridal-grid .article-card{border-radius:4px;background:#fff}
+.bridal-grid .article-card:hover{border-color:#c9b6bc;box-shadow:none;transform:translateY(-2px)}
+.bridal-grid .article-card h3{font-family:"Hiragino Mincho ProN","Yu Mincho",YuMincho,"Noto Serif JP",serif;font-weight:600;line-height:1.6}
+.bridal-grid .tag,.bridal-grid .article-card>span{color:#6f4a55}
+@media(max-width:800px){
+  .bridal-page .article h2{margin-top:48px}
+  .planning-flow li{padding:22px 22px 22px 64px}
+  .planning-flow li:before{left:20px;top:22px}
+  .comparison-list article{padding:22px}
+  .bridal-cta{padding:26px 22px}
+}
+@media(max-width:480px){
+  .bridal-page .article h1{font-size:27px}
+  .bridal-page .article p,.bridal-page .article li{line-height:1.9}
+  .bridal-figure{border-radius:2px}
+}
+/* ダークテーマ。.bridal-page 配下のみに限定し、既存ページを巻き込まない */
+@media(prefers-color-scheme:dark){
+  .bridal-page{
+    --bd-ink:#ece7e3;--bd-ink-soft:#a9a19b;--bd-paper:#161415;--bd-surface:#1e1b1c;
+    --bd-line:#383234;--bd-accent:#c9a2ae;--bd-accent-soft:#251f22;
+  }
+  .bridal-page .ad-note{background:#0f0d0e}
+  .bridal-page .site-header{background:rgba(22,20,21,.94)}
+  .bridal-page .breadcrumb,.bridal-page footer{color:var(--bd-ink-soft)}
+  .bridal-page footer{border-top-color:var(--bd-line)}
+  .bridal-page .button{background:var(--bd-accent);color:#1a1618}
+  .bridal-page .button:hover{background:#d8b6c0;color:#1a1618}
+  .bridal-page .checklist input{filter:invert(.85)}
+  .bridal-page .plan-example thead th{background:var(--bd-accent-soft)}
+}
