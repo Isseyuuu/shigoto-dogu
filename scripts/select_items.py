@@ -125,8 +125,8 @@ def main():
     p.add_argument("--min-price", type=int, default=4000, help="この価格未満は初心者向けとして除外")
     p.add_argument("--min-reviews", type=int, default=100)
     p.add_argument("--min-average", type=float, default=4.0)
-    p.add_argument("--max-price", type=int, default=15000,
-                   help="初心者向け記事のため上限を設ける(26400円のレーシングシューズが候補に入った)")
+    p.add_argument("--max-price", type=int, default=None,
+                   help="価格上限。既定は無制限(ターゲットは走る余裕がある層のため上限を設けない)")
     p.add_argument("--top", type=int, default=8)
     args = p.parse_args()
 
@@ -145,7 +145,7 @@ def main():
             dropped["除外語"] += 1; continue
         if (r["itemPrice"] or 0) < args.min_price:
             dropped["価格下限"] += 1; continue
-        if (r["itemPrice"] or 0) > args.max_price:
+        if args.max_price is not None and (r["itemPrice"] or 0) > args.max_price:
             dropped["価格上限"] += 1; continue
         if r["reviewCount"] < args.min_reviews:
             dropped["レビュー不足"] += 1; continue

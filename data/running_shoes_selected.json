@@ -15,7 +15,7 @@
       "オン"
     ],
     "minPrice": 4000,
-    "maxPrice": 15000,
+    "maxPrice": null,
     "minReviews": 100,
     "minAverage": 4.0
   },
@@ -118,6 +118,22 @@
       "brand": "ニューバランス"
     },
     {
+      "itemCode": "asicsonline:10007124",
+      "itemName": "アシックス SUPERBLAST 3 スーパーブラスト 3 ランニングシューズ ユニセックス STANDARD｜スポーツシューズ ランニング ジョギング 運動靴 男性 女性｜asics",
+      "shopName": "アシックス公式ストア楽天市場店",
+      "itemPrice": 26400,
+      "taxFlag": 0,
+      "taxNote": "税込",
+      "postageFlag": 1,
+      "postageNote": "送料別",
+      "reviewCount": 105,
+      "reviewAverage": 5.0,
+      "itemUrl": "https://hb.afl.rakuten.co.jp/hgc/g00tkqho.2j8hh4f5.g00tkqho.2j8hib18/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fasicsonline%2F1013a177%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fasicsonline%2Fi%2F10007124%2F&rafcid=wsc_i_is_d44b87e9-9d1f-4ec8-9586-07676a3e9c39",
+      "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/g00tkqho.2j8hh4f5.g00tkqho.2j8hib18/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fasicsonline%2F1013a177%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fasicsonline%2Fi%2F10007124%2F&rafcid=wsc_i_is_d44b87e9-9d1f-4ec8-9586-07676a3e9c39",
+      "imageUrl": "https://thumbnail.image.rakuten.co.jp/@0_mall/asicsonline/cabinet/10758351/cf_item/thum2/1013a177_2608thu.jpg?_ex=128x128",
+      "brand": "アシックス"
+    },
+    {
       "itemCode": "foot-time:10015113",
       "itemName": "ニューバランス スニーカー レディース アリシ new balance Arishi フレッシュフォーム Fresh Foam Arishi v4 WARIS ランニング ウォーキング グリーン ブラウン シルバー ホワイト ベージュ ブラウン ブルー NB",
       "shopName": "Foot Time",
@@ -132,22 +148,6 @@
       "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/g00qkp0o.2j8hh3da.g00qkp0o.2j8hid26/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ffoot-time%2Fnb-waris%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ffoot-time%2Fi%2F10015113%2F&rafcid=wsc_i_is_d44b87e9-9d1f-4ec8-9586-07676a3e9c39",
       "imageUrl": "https://thumbnail.image.rakuten.co.jp/@0_mall/foot-time/cabinet/item/main/nb-waris-main.jpg?_ex=128x128",
       "brand": "ニューバランス"
-    },
-    {
-      "itemCode": "adidas:10197542",
-      "itemName": "アディダス adidas ランニング コアランナー 3 / CORERUNNER 3 パフォーマンス レディース シューズ・靴 スニーカー 白 ホワイト HP7559 ランニングシューズ",
-      "shopName": "adidas Online Shop 楽天市場店",
-      "itemPrice": 6600,
-      "taxFlag": 0,
-      "taxNote": "税込",
-      "postageFlag": 0,
-      "postageNote": "送料込",
-      "reviewCount": 100,
-      "reviewAverage": 4.48,
-      "itemUrl": "https://hb.afl.rakuten.co.jp/hgc/g00r74jo.2j8hh207.g00r74jo.2j8hia01/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fadidas%2Fhp7559%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fadidas%2Fi%2F10197542%2F&rafcid=wsc_i_is_d44b87e9-9d1f-4ec8-9586-07676a3e9c39",
-      "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/g00r74jo.2j8hh207.g00r74jo.2j8hia01/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fadidas%2Fhp7559%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fadidas%2Fi%2F10197542%2F&rafcid=wsc_i_is_d44b87e9-9d1f-4ec8-9586-07676a3e9c39",
-      "imageUrl": "https://thumbnail.image.rakuten.co.jp/@0_mall/adidas/cabinet/p22/hp7559_l.jpg?_ex=128x128",
-      "brand": "アディダス"
     }
   ]
 }
