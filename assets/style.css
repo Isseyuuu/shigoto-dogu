@@ -156,3 +156,9 @@ html{scroll-padding-top:96px}body{font-size:16px;-webkit-font-smoothing:antialia
   .bridal-page .checklist input{filter:invert(.85)}
   .bridal-page .plan-example thead th{background:var(--bd-accent-soft)}
 }
+
+
+/* 広告表示バナーを最下部へ移動(2026-08)。フッター下に置くため、上端の区切り線と余白を持たせる */
+.ad-note{border-top:1px solid rgba(255,255,255,.14);padding:12px 20px}
+body>.ad-note:last-of-type{margin-top:0}
+.bridal-page .ad-note{border-top-color:rgba(255,255,255,.1)}
